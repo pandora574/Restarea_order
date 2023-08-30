@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <EditText
+        android:id="@+id/EditText_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="아이디 입력"
+        android:padding="8dp"/>
+
+    <EditText
+        android:id="@+id/EditText_pw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="패스워드 입력"
+        android:padding="8dp"/>
+    <EditText
+        android:id="@+id/EditText_confirmp_pw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="패스워드 재확인"
+        android:padding="8dp"/>
+    <EditText
+        android:id="@+id/EditText_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="이름 입력"
+        android:padding="8dp"/>
+    <EditText
+        android:id="@+id/EditText_usernum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="연락처"
+        android:padding="8dp"/>
+
+
+    <Button
+        android:id="@+id/Button_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        android:layout_gravity="end"/>
+
+    <Button
+        android:id="@+id/Button_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그인"
+        android:layout_gravity="end"/>
+</LinearLayout>
