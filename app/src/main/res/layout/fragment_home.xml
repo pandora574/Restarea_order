@@ -13,11 +13,16 @@
         android:gravity="center"
         android:textSize="24dp"
         android:text="홈" />
+    <FrameLayout
+        android:id="@+id/contain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
     <Button
         android:id="@+id/csv_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
+        android:layout_gravity="bottom|right"
         android:text="CSV"/>
+
 
 </FrameLayout>
