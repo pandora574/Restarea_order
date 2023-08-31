@@ -20,6 +20,9 @@
             android:value="AIzaSyCapv4PJiHOKNJpTwwEocQIhOaf20kjA-o" />
 
         <activity
+            android:name=".PaymentActivity"
+            android:exported="false" />
+        <activity
             android:name=".OrderlistActivity"
             android:exported="false" />
         <activity
