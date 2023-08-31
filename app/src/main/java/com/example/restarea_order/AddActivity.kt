@@ -36,12 +36,13 @@ class AddActivity : AppCompatActivity() {
 
         var orderList = ArrayList<OrderList>()
 
+
         db_store.collection("cart").whereEqualTo("uid",currentUserUid.toString())
             .get()
             .addOnSuccessListener { result ->
                 for (document in result) { //document: 자동아이디
                     //리사이클러 뷰에 가져온 데이터를 넣을 때는 as를 사용해서 형변환해야함
-                        val item = OrderList(
+                       val item = OrderList(
                             //document["restarea"] as String,
                             document["menu"] as String,
                             document["price"] as String,

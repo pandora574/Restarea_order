@@ -26,7 +26,7 @@ class DetailActivity : AppCompatActivity() {
         binding.toolbar.setTitle("상품정보")
 
         binding.name.text = datas.name.toString()
-        binding.price.text = datas.price.toString()
+        binding.price.text = datas.price.toString() + "원"
         binding.data.text = datas.data.toString()
 
         var num = 1

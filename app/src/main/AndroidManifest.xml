@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Restarea_order"
         tools:targetApi="31">
         <activity
+            android:name=".PaymentActivity"
+            android:exported="false" />
+        <activity
             android:name=".OrderlistActivity"
             android:exported="false" />
         <activity
