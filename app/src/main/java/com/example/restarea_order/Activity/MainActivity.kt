@@ -1,4 +1,4 @@
-package com.example.restarea_order
+package com.example.restarea_order.Activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,9 +7,12 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
+import com.example.restarea_order.*
+import com.example.restarea_order.Fragment.HistoryFragment
+import com.example.restarea_order.Fragment.HomeFragment
+import com.example.restarea_order.Fragment.InfoFragment
+import com.example.restarea_order.Fragment.ProductFragment
 import com.example.restarea_order.databinding.ActivityMainBinding
-import com.example.restarea_order.databinding.ActivitySignupBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -35,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item?.itemId){
-            R.id.cart->{
+            R.id.cart ->{
                 val intent = Intent(this, AddActivity::class.java)
                 startActivity(intent)
                 return super.onOptionsItemSelected(item)

@@ -1,4 +1,4 @@
-package com.example.restarea_order
+package com.example.restarea_order.Adapter
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -7,6 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.restarea_order.Activity.DetailActivity
+import com.example.restarea_order.Data.Food
+import com.example.restarea_order.Data.Header
+import com.example.restarea_order.Data.ParentData
+import com.example.restarea_order.R
 
 class FoodAdapter(var itemList: ArrayList<ParentData>) : RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="order_list">
+        <item>신용/체크카드</item>
+        <item>휴대폰결제</item>
+        <item>토스페이</item>
+        <item>카카오페이</item>
+        <item>만나서결제</item>
+    </string-array>
+</resources>

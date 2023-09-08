@@ -1,4 +1,4 @@
-package com.example.restarea_order
+package com.example.restarea_order.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -17,11 +17,10 @@ class PaymentActivity : AppCompatActivity() {
         binding = ActivityPaymentBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.toolbar.setTitle("결제하기")
+        binding.toolbar.setTitle("주문완료")
 
         binding.toolbar.setNavigationOnClickListener {
             onBackPressed()
         }
-        var datas = intent.getSerializableExtra("sum")
     }
 }

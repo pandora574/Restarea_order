@@ -1,8 +1,7 @@
-package com.example.restarea_order
+package com.example.restarea_order.Fragment
 
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.location.Location
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -10,17 +9,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import com.example.restarea_order.Activity.CSVActivity
+import com.example.restarea_order.R
 import com.example.restarea_order.databinding.FragmentHomeBinding
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
-import com.google.android.gms.maps.CameraUpdate
-import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.ktx.Firebase
-import com.google.type.LatLng
 
 class HomeFragment : Fragment(), OnMapReadyCallback{
     private var binding: FragmentHomeBinding? = null
@@ -40,12 +37,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback{
         auth = FirebaseAuth.getInstance()
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity())
 
-        val user = auth.currentUser
-        if (user != null) {
-            val uid = user.uid
-            Log.d("uid",uid)
-            binding!!.userid.text = uid
-        }
+
             binding!!.csvButton.setOnClickListener{
                 val intent = Intent(requireContext(), CSVActivity::class.java)
                 startActivity(intent)

@@ -1,4 +1,4 @@
-package com.example.restarea_order
+package com.example.restarea_order.Fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.restarea_order.Activity.LoginActivity
 import com.example.restarea_order.databinding.FragmentInfoBinding
 import com.google.firebase.auth.FirebaseAuth
 

@@ -1,4 +1,4 @@
-package com.example.restarea_order
+package com.example.restarea_order.Data
 
 import java.io.Serializable
 

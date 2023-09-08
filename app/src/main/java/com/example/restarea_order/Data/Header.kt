@@ -1,6 +1,6 @@
-package com.example.restarea_order
+package com.example.restarea_order.Data
 
-class Header(category:String):ParentData(category) {
+class Header(category:String): ParentData(category) {
     override fun getType(): Int {
         return TYPE_HEADER
     }

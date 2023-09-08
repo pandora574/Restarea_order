@@ -1,4 +1,4 @@
-package com.example.restarea_order
+package com.example.restarea_order.Activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -45,7 +45,7 @@ class SignupActivity : AppCompatActivity() {
                                 "usernum" to user_num
                             )
                             db_store.collection("account").document(uid).set(userinfo)
-                            val intent = Intent(this,MainActivity::class.java)
+                            val intent = Intent(this, MainActivity::class.java)
                             startActivity(intent)
                         }
                         Log.d("auth",user.toString())
@@ -62,7 +62,7 @@ class SignupActivity : AppCompatActivity() {
 
         }
         binding.ButtonLogin.setOnClickListener {
-            val intent = Intent(this,LoginActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
     }

@@ -1,9 +1,10 @@
-package com.example.restarea_order
+package com.example.restarea_order.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.example.restarea_order.Data.Food
 import com.example.restarea_order.databinding.ActivityDetailBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -31,23 +32,31 @@ class DetailActivity : AppCompatActivity() {
 
         var num = 1
 
+        var sum =  datas.price.toString().toInt()
+        Log.d("합계", sum.toString())
+
         binding.ButtonPlus.setOnClickListener {
             num++
             binding.TextviewNum.text = num.toString()
+            sum = num * datas.price.toString().toInt()
         }
         binding.ButtonDel.setOnClickListener {
             if (num == 1){
                 binding.TextviewNum.text = num.toString()
+                sum = num * datas.price.toString().toInt()
             }else{
                 num--
                 binding.TextviewNum.text = num.toString()
+                sum = num * datas.price.toString().toInt()
+
             }
         }
 
         binding.ButtonAdd.setOnClickListener {
                 val userinfo = hashMapOf(
                     "menu" to  datas.name.toString(),
-                    "price" to datas.price.toString(),
+                    "primecost" to datas.price.toString(),
+                    "price" to sum.toString(),
                     "num" to num.toString(),
                     "uid" to currentUserUid,
                     "restarea" to "서부산휴게소"

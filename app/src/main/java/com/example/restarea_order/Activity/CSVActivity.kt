@@ -1,4 +1,4 @@
-package com.example.restarea_order
+package com.example.restarea_order.Activity
 
 import android.content.res.AssetManager
 import android.os.Bundle

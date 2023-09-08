@@ -1,4 +1,4 @@
-package com.example.restarea_order
+package com.example.restarea_order.Fragment
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -9,9 +9,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.restarea_order.Adapter.FoodAdapter
+import com.example.restarea_order.Data.Food
+import com.example.restarea_order.Data.Header
+import com.example.restarea_order.Data.ParentData
 import com.example.restarea_order.databinding.FragmentProductBinding
 import com.google.android.material.chip.Chip
-import com.google.android.material.chip.ChipGroup
 import com.google.firebase.firestore.FirebaseFirestore
 import java.util.*
 import kotlin.collections.ArrayList

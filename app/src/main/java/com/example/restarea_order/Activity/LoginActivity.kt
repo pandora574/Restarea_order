@@ -1,12 +1,11 @@
-package com.example.restarea_order
+package com.example.restarea_order.Activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import com.example.restarea_order.databinding.ActivityLoginBinding
-import com.example.restarea_order.databinding.ActivitySignupBinding
+import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 
@@ -18,7 +17,8 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+// Firebase를 초기화합니다.
+        FirebaseApp.initializeApp(this)
         auth = FirebaseAuth.getInstance()
 
         binding.ButtonLogin.setOnClickListener {
@@ -43,7 +43,7 @@ class LoginActivity : AppCompatActivity() {
             }
         }
         binding.ButtonSignup.setOnClickListener {
-            val intent = Intent(this,SignupActivity::class.java)
+            val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
         }
     }
@@ -53,7 +53,7 @@ class LoginActivity : AppCompatActivity() {
     }
     fun moveMainPage(user: FirebaseUser?){
         if( user!= null){
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
 
         }
